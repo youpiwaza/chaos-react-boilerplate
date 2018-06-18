@@ -1,23 +1,22 @@
 /**
 *
-* CounterButton
+* CounterWrapper
 *
 */
 
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 
-function CounterButton(props) {
+function CounterWrapper(props) {
   return (
-    <button onClick={props.handleClick}>
+    <div>
       {Children.toArray(props.children)}
-    </button>
+    </div>
   );
 }
 
-CounterButton.propTypes = {
+CounterWrapper.propTypes = {
   children: PropTypes.node.isRequired,
-  handleClick: PropTypes.func,
 };
 
-export default CounterButton;
+export default CounterWrapper;

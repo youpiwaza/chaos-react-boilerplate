@@ -14,6 +14,7 @@ import { compose } from 'redux';
 import ErrorBoundary from 'containers/ErrorBoundary';
 import CounterButton from 'components/CounterButton';
 import CounterTextInput from 'components/CounterTextInput';
+import CounterWrapper from 'components/CounterWrapper';
 
 import injectReducer from 'utils/injectReducer';
 import { makeSelectCount } from './selectors';
@@ -25,7 +26,7 @@ export class Counter extends React.Component { // eslint-disable-line react/pref
   render() {
     return (
       <ErrorBoundary>
-        <div>
+        <CounterWrapper>
           <div>
             <FormattedMessage {...messages.header} />
           </div>
@@ -37,7 +38,7 @@ export class Counter extends React.Component { // eslint-disable-line react/pref
             <CounterButton handleClick={this.props.onIncrementCount}>+</CounterButton>
             <CounterButton handleClick={this.props.onDecrementCount}>-</CounterButton>
           </div>
-        </div>
+        </CounterWrapper>
       </ErrorBoundary>
     );
   }
