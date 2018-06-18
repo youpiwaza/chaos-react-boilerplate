@@ -9,7 +9,10 @@ import {
   DEFAULT_ACTION,
 } from './constants';
 
-const initialState = fromJS({});
+// Store the count integer
+const initialState = fromJS({
+  count: 0,
+});
 
 function counterReducer(state = initialState, action) {
   switch (action.type) {
