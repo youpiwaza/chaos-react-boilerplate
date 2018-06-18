@@ -14,7 +14,7 @@ import { compose } from 'redux';
 import ErrorBoundary from 'containers/ErrorBoundary';
 
 import injectReducer from 'utils/injectReducer';
-import makeSelectCount from './selectors';
+import { makeSelectCount } from './selectors';
 import reducer from './reducer';
 import messages from './messages';
 
