@@ -4,7 +4,7 @@
 // import CounterWrapper from '../index';
 
 describe('<CounterWrapper />', () => {
-  it('Expect to have unit tests specified', () => {
+  it('TODO / Expect to have unit tests specified', () => {
     expect(true).toEqual(false);
   });
 });
