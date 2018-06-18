@@ -24,8 +24,8 @@ const makeSelectCounter = () => createSelector(
   (substate) => substate.toJS()
 );
 
-export default makeSelectCounter;
 export {
   selectCounterDomain,
   makeSelectCount,
+  makeSelectCounter,
 };
