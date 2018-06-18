@@ -13,7 +13,6 @@ function CounterTextInput(props) {
       onChange={props.handleChange}
       type="text"
       value={props.count}
-      testAttr="test"
     />
   );
 }
