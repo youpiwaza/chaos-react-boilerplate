@@ -14,7 +14,11 @@ import { compose } from 'redux';
 import ErrorBoundary from 'containers/ErrorBoundary';
 
 import injectReducer from 'utils/injectReducer';
-import makeSelectCounter from './selectors';
+import {
+  makeSelectCount,
+  makeSelectCounter,
+}
+from './selectors';
 import reducer from './reducer';
 import messages from './messages';
 
@@ -40,10 +44,15 @@ export class Counter extends React.Component { // eslint-disable-line react/pref
 }
 
 Counter.propTypes = {
+  // state
+  count: PropTypes.number.isRequired,
+
+  // events
   dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
+  count: makeSelectCount(),
   counter: makeSelectCounter(),
 });
 

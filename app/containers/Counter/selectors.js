@@ -9,6 +9,11 @@ const selectCounterDomain = (state) => state.get('counter');
  * Other specific selectors
  */
 
+// return count property only
+const makeSelectCount = () => createSelector(
+  selectCounterDomain,
+  (counterState) => counterState.get('count')
+);
 
 /**
  * Default selector used by Counter
@@ -22,4 +27,5 @@ const makeSelectCounter = () => createSelector(
 export default makeSelectCounter;
 export {
   selectCounterDomain,
+  makeSelectCount,
 };
