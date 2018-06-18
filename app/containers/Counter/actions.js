@@ -5,11 +5,29 @@
  */
 
 import {
-  DEFAULT_ACTION,
+  DECREMENT,
+  INCREMENT,
+  SET,
 } from './constants';
 
-export function defaultAction() {
+// Remove 1 to counter count
+export function decrementAction() {
   return {
-    type: DEFAULT_ACTION,
+    type: DECREMENT,
+  };
+}
+
+// Add 1 to counter count
+export function incrementAction() {
+  return {
+    type: INCREMENT,
+  };
+}
+
+// Set counter count to parameter value
+export function setAction(count) {
+  return {
+    count,
+    type: SET,
   };
 }

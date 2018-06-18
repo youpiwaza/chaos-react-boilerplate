@@ -1,18 +1,40 @@
 
 import {
-  defaultAction,
+  decrementAction,
+  incrementAction,
+  setAction,
 } from '../actions';
 import {
-  DEFAULT_ACTION,
+  DECREMENT,
+  INCREMENT,
+  SET,
 } from '../constants';
 
 describe('Counter actions', () => {
-  describe('Default Action', () => {
-    it('has a type of DEFAULT_ACTION', () => {
-      const expected = {
-        type: DEFAULT_ACTION,
+  describe('Decrement Action', () => {
+    it('has a type of DECREMENT', () => {
+      const expectedResult = {
+        type: DECREMENT,
       };
-      expect(defaultAction()).toEqual(expected);
+      expect(decrementAction()).toEqual(expectedResult);
+    });
+  });
+  describe('Increment Action', () => {
+    it('has a type of INCREMENT', () => {
+      const expectedResult = {
+        type: INCREMENT,
+      };
+      expect(incrementAction()).toEqual(expectedResult);
+    });
+  });
+  describe('Set Action', () => {
+    it('has a type of SET', () => {
+      const fixture = 8;
+      const expectedResult = {
+        count: fixture,
+        type: SET,
+      };
+      expect(setAction(fixture)).toEqual(expectedResult);
     });
   });
 });
