@@ -12,6 +12,8 @@ import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
 import ErrorBoundary from 'containers/ErrorBoundary';
+import CounterButton from 'components/CounterButton';
+import CounterTextInput from 'components/CounterTextInput';
 
 import injectReducer from 'utils/injectReducer';
 import { makeSelectCount } from './selectors';
@@ -27,14 +29,13 @@ export class Counter extends React.Component { // eslint-disable-line react/pref
           <div>
             <FormattedMessage {...messages.header} />
           </div>
-          <input
-            onChange={this.props.onChangeCount}
-            type="text"
-            value={this.props.count}
+          <CounterTextInput
+            count={this.props.count}
+            handleChange={this.props.onChangeCount}
           />
           <div>
-            <button onClick={this.props.onIncrementCount}>+</button>
-            <button onClick={this.props.onDecrementCount}>-</button>
+            <CounterButton handleClick={this.props.onIncrementCount}>+</CounterButton>
+            <CounterButton handleClick={this.props.onDecrementCount}>-</CounterButton>
           </div>
         </div>
       </ErrorBoundary>
