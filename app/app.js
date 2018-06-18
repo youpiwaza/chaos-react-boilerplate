@@ -24,6 +24,9 @@ import App from 'containers/App';
 // Import default theme
 import theme from 'themes/default';
 
+// Import Error boundaries component
+import ErrorBoundary from 'containers/ErrorBoundary';
+
 // Import Language Provider
 import LanguageProvider from 'containers/LanguageProvider';
 
@@ -73,13 +76,15 @@ const MOUNT_NODE = document.getElementById('app');
 const render = (messages) => {
   ReactDOM.render(
     <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <LanguageProvider messages={messages}>
-          <ConnectedRouter history={history}>
-            <App />
-          </ConnectedRouter>
-        </LanguageProvider>
-      </ThemeProvider>
+      <ErrorBoundary>
+        <ThemeProvider theme={theme}>
+          <LanguageProvider messages={messages}>
+            <ConnectedRouter history={history}>
+              <App />
+            </ConnectedRouter>
+          </LanguageProvider>
+        </ThemeProvider>
+      </ErrorBoundary>
     </Provider>,
     MOUNT_NODE
   );
