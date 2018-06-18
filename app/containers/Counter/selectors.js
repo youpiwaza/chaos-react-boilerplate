@@ -15,17 +15,7 @@ const makeSelectCount = () => createSelector(
   (counterState) => counterState.get('count')
 );
 
-/**
- * Default selector used by Counter
- */
-
-const makeSelectCounter = () => createSelector(
-  selectCounterDomain,
-  (substate) => substate.toJS()
-);
-
 export {
   selectCounterDomain,
   makeSelectCount,
-  makeSelectCounter,
 };

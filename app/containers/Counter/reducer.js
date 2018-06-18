@@ -6,7 +6,7 @@
 
 import { fromJS } from 'immutable';
 import {
-  DEFAULT_ACTION,
+//  DEFAULT_ACTION,
 } from './constants';
 
 // Store the count integer
@@ -16,8 +16,6 @@ const initialState = fromJS({
 
 function counterReducer(state = initialState, action) {
   switch (action.type) {
-    case DEFAULT_ACTION:
-      return state;
     default:
       return state;
   }
