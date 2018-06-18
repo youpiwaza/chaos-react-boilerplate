@@ -20,7 +20,16 @@ export class Counter extends React.Component { // eslint-disable-line react/pref
   render() {
     return (
       <div>
-        <FormattedMessage {...messages.header} />
+        <div>
+          <FormattedMessage {...messages.header} />
+        </div>
+        <input
+          type="text"
+        />
+        <div>
+          <button>+</button>
+          <button>-</button>
+        </div>
       </div>
     );
   }

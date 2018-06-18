@@ -12,6 +12,8 @@ import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose } from 'redux';
 
+import Counter from 'containers/Counter';
+
 import injectSaga from 'utils/injectSaga';
 import injectReducer from 'utils/injectReducer';
 import makeSelectTestPage from './selectors';
@@ -30,6 +32,7 @@ export class TestPage extends React.Component { // eslint-disable-line react/pre
         <h1>
           <FormattedMessage {...messages.header} />
         </h1>
+        <Counter />
       </div>
     );
   }
