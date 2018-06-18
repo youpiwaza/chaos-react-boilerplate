@@ -1,8 +1,18 @@
-import styled from 'styled-components';
 
+import styled from 'styled-components';
+import defaultTheme from './defaultTheme';
+
+// Theme props
+const primaryColor = (props) =>
+  props.theme.colors.primary ?
+    props.theme.colors.primary :
+    defaultTheme.theme.colors.primary;
+
+// Styling
 const StyledCounterButton = styled.button`
-  border-left: 1px solid mediumseagreen;
-  border-right: 1px solid mediumseagreen;
+  border-left: 1px solid ${primaryColor};
+  border-right: 1px solid ${primaryColor};
+  color: ${primaryColor};
   font-weight: bold;
   height: 3em;
   text-align: center;
@@ -18,7 +28,7 @@ const StyledCounterButton = styled.button`
   }
 
   &:hover {
-    background-color: mediumseagreen;
+    background-color: ${primaryColor};
     color: white;
   }
 `;
