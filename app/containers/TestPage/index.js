@@ -24,10 +24,12 @@ export class TestPage extends React.Component { // eslint-disable-line react/pre
     return (
       <div>
         <Helmet>
-          <title>TestPage</title>
-          <meta name="description" content="Description of TestPage" />
+          <title>Test Page</title>
+          <meta name="description" content="Page created in order to run several tests" />
         </Helmet>
-        <FormattedMessage {...messages.header} />
+        <h1>
+          <FormattedMessage {...messages.header} />
+        </h1>
       </div>
     );
   }

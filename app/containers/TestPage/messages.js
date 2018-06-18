@@ -8,6 +8,6 @@ import { defineMessages } from 'react-intl';
 export default defineMessages({
   header: {
     id: 'app.containers.TestPage.header',
-    defaultMessage: 'This is TestPage container !',
+    defaultMessage: 'Test page',
   },
 });
