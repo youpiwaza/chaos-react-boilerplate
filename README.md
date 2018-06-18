@@ -15,4 +15,6 @@ documentation (french) : https://docs.google.com/document/d/19WL_VBK8oHHyyhdAzxG
 
 ### Config
 
+- removed pre-commit, didn't work
 - package.json > replace npm run with yarn, removed -- to forward option (deprecated in yarn)
+- webpack > clearer debug
