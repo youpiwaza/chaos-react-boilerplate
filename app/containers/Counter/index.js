@@ -15,6 +15,7 @@ import ErrorBoundary from 'containers/ErrorBoundary';
 
 import injectReducer from 'utils/injectReducer';
 import { makeSelectCount } from './selectors';
+import { decrementAction, incrementAction, setAction } from './actions';
 import reducer from './reducer';
 import messages from './messages';
 
@@ -27,11 +28,13 @@ export class Counter extends React.Component { // eslint-disable-line react/pref
             <FormattedMessage {...messages.header} />
           </div>
           <input
+            onChange={this.props.onChangeCount}
             type="text"
+            value={this.props.count}
           />
           <div>
-            <button>+</button>
-            <button>-</button>
+            <button onClick={this.props.onIncrementCount}>+</button>
+            <button onClick={this.props.onDecrementCount}>-</button>
           </div>
         </div>
       </ErrorBoundary>
@@ -44,7 +47,9 @@ Counter.propTypes = {
   count: PropTypes.number.isRequired,
 
   // events
-  dispatch: PropTypes.func.isRequired,
+  onDecrementCount: PropTypes.func.isRequired,
+  onIncrementCount: PropTypes.func.isRequired,
+  onChangeCount: PropTypes.func,
 };
 
 const mapStateToProps = createStructuredSelector({
@@ -53,7 +58,10 @@ const mapStateToProps = createStructuredSelector({
 
 function mapDispatchToProps(dispatch) {
   return {
-    dispatch,
+    onDecrementCount: () => dispatch(decrementAction()),
+    onIncrementCount: () => dispatch(incrementAction()),
+    onChangeCount: (evt) => dispatch(setAction(evt.target.value)),
+    // dispatch
   };
 }
 
