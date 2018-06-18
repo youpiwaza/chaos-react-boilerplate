@@ -10,6 +10,8 @@ documentation (french) : https://docs.google.com/document/d/19WL_VBK8oHHyyhdAzxG
 - yarn lint > eslint / JSX verifications
 - yarn test > lint & unit tests
 - yarn test MyComponentn > lint & unit tests for a single component
+- yarn storybook > test documentation generator (HMR)
+- yarn build-storybook > generate static doc, in storybook-static/index.hmtl
 
 ## Adds to react-boilerplate
 
@@ -19,3 +21,4 @@ documentation (french) : https://docs.google.com/document/d/19WL_VBK8oHHyyhdAzxG
 - package.json > replace npm run with yarn, removed -- to forward option (deprecated in yarn)
 - webpack > clearer debug
 - install a theme provider
+- install a documentation generator (storybook) & major addons (actions, links, notes, info)
