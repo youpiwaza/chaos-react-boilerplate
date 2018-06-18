@@ -1,4 +1,5 @@
 {
+  "app.containers.Counter.header": "Counter ya",
   "app.containers.ErrorBoundary.errorTitle": "Ach groB problem",
   "app.containers.TestPage.header": "Test page ya",
   "boilerplate.components.Footer.author.message": "Mit Liebe gemacht von {author}.",

@@ -4,19 +4,17 @@
 *
 */
 
-import React, { Children } from 'react';
-import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-function CounterWrapper(props) {
-  return (
-    <div>
-      {Children.toArray(props.children)}
-    </div>
-  );
-}
-
-CounterWrapper.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+const CounterWrapper = styled.div`
+  border: 2px solid mediumseagreen;
+  color: mediumseagreen;
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding-top: .25em;
+  text-align: center;
+  width: 6em;
+`;
 
 export default CounterWrapper;

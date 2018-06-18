@@ -7,11 +7,13 @@
 import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 
+import StyledCounterButton from './StyledCounterButton';
+
 function CounterButton(props) {
   return (
-    <button onClick={props.handleClick}>
+    <StyledCounterButton onClick={props.handleClick}>
       {Children.toArray(props.children)}
-    </button>
+    </StyledCounterButton>
   );
 }
 

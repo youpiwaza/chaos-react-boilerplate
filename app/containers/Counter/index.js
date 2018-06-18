@@ -13,7 +13,9 @@ import { compose } from 'redux';
 
 import ErrorBoundary from 'containers/ErrorBoundary';
 import CounterButton from 'components/CounterButton';
+import CounterButtonWrapper from 'components/CounterButtonWrapper';
 import CounterTextInput from 'components/CounterTextInput';
+import CounterTextWrapper from 'components/CounterTextWrapper';
 import CounterWrapper from 'components/CounterWrapper';
 
 import injectReducer from 'utils/injectReducer';
@@ -27,17 +29,17 @@ export class Counter extends React.Component { // eslint-disable-line react/pref
     return (
       <ErrorBoundary>
         <CounterWrapper>
-          <div>
+          <CounterTextWrapper>
             <FormattedMessage {...messages.header} />
-          </div>
-          <CounterTextInput
-            count={this.props.count}
-            handleChange={this.props.onChangeCount}
-          />
-          <div>
+            <CounterTextInput
+              count={this.props.count}
+              handleChange={this.props.onChangeCount}
+            />
+          </CounterTextWrapper>
+          <CounterButtonWrapper>
             <CounterButton handleClick={this.props.onIncrementCount}>+</CounterButton>
             <CounterButton handleClick={this.props.onDecrementCount}>-</CounterButton>
-          </div>
+          </CounterButtonWrapper>
         </CounterWrapper>
       </ErrorBoundary>
     );

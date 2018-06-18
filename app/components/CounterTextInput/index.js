@@ -7,9 +7,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import StyledCounterTextInput from './StyledCounterTextInput';
+
 function CounterTextInput(props) {
   return (
-    <input
+    <StyledCounterTextInput
       onChange={props.handleChange}
       type="text"
       value={props.count}
