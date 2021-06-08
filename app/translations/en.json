@@ -1,4 +1,5 @@
 {
+  "app.containers.Counter.header": "Counter",
   "app.containers.ErrorBoundary.errorTitle": "Something went wrong..",
   "app.containers.TestPage.header": "Test page",
   "boilerplate.components.Footer.author.message": "Made with love by {author}.",
