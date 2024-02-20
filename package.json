@@ -224,7 +224,7 @@
     "immutable": "3.8.1",
     "intl": "1.2.5",
     "invariant": "2.2.2",
-    "ip": "1.1.5",
+    "ip": "1.1.9",
     "lodash": "4.17.21",
     "minimist": "1.2.5",
     "prop-types": "15.5.10",
